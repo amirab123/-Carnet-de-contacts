@@ -1,0 +1,183 @@
+/* --------- BASE --------- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e6f0fa, #f0f4f8);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* --------- CONTAINER --------- */
+.container {
+    background-color: #ffffff;
+    margin: 50px 0;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    max-width: 800px;
+    width: 95%;
+}
+
+/* --------- TITRES --------- */
+h1 {
+    text-align: center;
+    color: #2f4f4f;
+    margin-bottom: 30px;
+}
+
+/* --------- FORMULAIRES --------- */
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    color: #333;
+}
+.success {
+  background-color: #e0ffe8;
+  color: #207d3d;
+  border: 1px solid #2ecc71;
+  padding: 12px 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 15px;
+    transition: border 0.3s;
+}
+
+input:focus {
+    border-color: #28a745;
+    outline: none;
+}
+
+/* --------- BOUTONS --------- */
+button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* --------- LIENS --------- */
+a {
+    color: #12ba99;
+    text-decoration: none;
+    margin: 5px;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* --------- TABLE --------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2fdf5;
+    color: #333;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* --------- RESPONSIVE --------- */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    th {
+        display: none;
+    }
+
+    td {
+        position: relative;
+        padding-left: 50%;
+        margin-bottom: 10px;
+        border: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 45%;
+        padding-left: 15px;
+        font-weight: bold;
+        color: #444;
+    }
+}
+.erreur {
+  background-color: #ffe6e6;
+  color: #cc0000;
+  border: 1px solid #cc0000;
+  padding: 12px 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+input {
+  transition: all 0.3s ease;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+input:invalid {
+  border-color: #e74c3c;
+  background-color: #ffecec;
+  box-shadow: 0 0 5px rgba(231, 76, 60, 0.5);
+}
+
+input:valid {
+  border-color: #2ecc71;
+  background-color: #ecfff3;
+  box-shadow: 0 0 5px rgba(46, 204, 113, 0.4);
+}
